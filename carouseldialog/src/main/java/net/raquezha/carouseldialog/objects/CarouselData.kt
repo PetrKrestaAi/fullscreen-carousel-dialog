@@ -1,5 +1,6 @@
 package net.raquezha.carouseldialog.objects
 
+import android.graphics.Bitmap
 import net.raquezha.carouseldialog.ImageScaleType
 import net.raquezha.carouseldialog.R
 
@@ -14,6 +15,7 @@ class CarouselData() {
     var actionType: Int = -1
     var imageHeight = 0
     var imageWidth = 0
+    var imageBitmap: Bitmap? = null
 
     constructor(builder: Builder) : this() {
         this.placeHolderImageResId = builder.getPlaceHolderImageResId()
@@ -26,6 +28,7 @@ class CarouselData() {
         this.placeHolderErrorImageResId = builder.getPlaceHolderErrorImageResId()
         this.imageHeight = builder.getImageHeight()
         this.imageWidth = builder.getImageWidth()
+        this.imageBitmap = builder.getImageBitmap()
     }
 
     class Builder {
@@ -39,6 +42,7 @@ class CarouselData() {
         private var cardName: String? = null
         private var imageHeight = 0
         private var imageWidth = 0
+        private var imageBitmap: Bitmap? = null
 
         fun build(): CarouselData {
             return CarouselData(this)
@@ -76,6 +80,11 @@ class CarouselData() {
 
         fun setImageUrl(url: String): Builder {
             this.imageUrl = url
+            return this
+        }
+
+        fun setImageBitmap(bitmap: Bitmap): Builder {
+            this.imageBitmap = bitmap
             return this
         }
 
@@ -128,6 +137,10 @@ class CarouselData() {
 
         fun getImageWidth(): Int {
             return imageWidth
+        }
+
+        fun getImageBitmap(): Bitmap? {
+            return imageBitmap
         }
 
     }

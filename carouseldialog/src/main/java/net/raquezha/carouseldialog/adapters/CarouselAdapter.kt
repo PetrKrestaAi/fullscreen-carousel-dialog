@@ -42,9 +42,9 @@ class CarouselAdapter constructor(private var data: MutableList<CarouselData>) :
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         Glide.with(context)
-                .applyDefaultRequestOptions(generateRequestOptions(data[position].imageScaleType, position))
-                .load(data[position].imageUrl)
-                .into(holder.image)
+            .applyDefaultRequestOptions(generateRequestOptions(data[position].imageScaleType, position))
+            .load(data[position].imageUrl ?: data[position].imageBitmap)
+            .into(holder.image)
 
         if (data[position].description?.isEmpty()!!) {
             holder.description.visibility = View.GONE
