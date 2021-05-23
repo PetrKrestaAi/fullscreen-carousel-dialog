@@ -31,7 +31,7 @@ class CarouselDialogHelper(private var context: Context, private var carouselDat
     var dismissButtonName = "DISMISS"
     var dismissButtonTextColor = ContextCompat.getColor(context, R.color.white)
     var backgroundColor = Color.TRANSPARENT
-    var rotation = 0
+    var rotation = 0f
 
     private var useDissmisBackground = true
     private var dismissButtonBackgroundColor = ContextCompat.getColor(context, R.color.orange_red)
