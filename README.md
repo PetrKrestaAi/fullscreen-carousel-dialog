@@ -1,6 +1,8 @@
 # Fullscreen Carousel Dialog
 A Library that loads your image, descriptions & button in a carousel style dialog
 
+Fork of: https://github.com/raquezha/fullscreen-carousel-dialog
+
 [ ![Download](https://api.bintray.com/packages/raquezha/fullscreen-carousel-dialog/carouseldialog/images/download.svg) ](https://bintray.com/raquezha/fullscreen-carousel-dialog/carouseldialog/_latestVersion)
 [![API](https://img.shields.io/badge/API-16%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=16)
 
@@ -9,7 +11,7 @@ A Library that loads your image, descriptions & button in a carousel style dialo
 ## Gradle
 ```groovy
 dependencies {
-  implementation 'net.raquezha.carouseldialog:carouseldialog:1.0.0-rc2'
+  implementation 'com.github.PetrKrestaAi:fullscreen-carousel-dialog:1.0.0-rc3'
 }
 ```
 
