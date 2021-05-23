@@ -30,6 +30,7 @@ class CarouselDialogHelper(private var context: Context, private var carouselDat
     var firstItemPosition = 0
     var dismissButtonName = "DISMISS"
     var dismissButtonTextColor = ContextCompat.getColor(context, R.color.white)
+    var backgroundColor = Color.TRANSPARENT
 
     private var useDissmisBackground = true
     private var dismissButtonBackgroundColor = ContextCompat.getColor(context, R.color.orange_red)
@@ -88,6 +89,10 @@ class CarouselDialogHelper(private var context: Context, private var carouselDat
         dismissButtonBackgroundColor = color
     }
 
+    fun setDialogBackground(color: Int) {
+        backgroundColor = color
+    }
+
     override fun initializeDialog() {
 
         dismissButton.text = dismissButtonName
@@ -98,6 +103,7 @@ class CarouselDialogHelper(private var context: Context, private var carouselDat
         else
             dismissButton.setBackgroundColor(dismissButtonBackgroundColor)
 
+        dialogView.setBackgroundColor(backgroundColor)
 
         evaluator = ArgbEvaluator()
 
