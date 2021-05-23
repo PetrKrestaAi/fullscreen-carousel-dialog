@@ -11,7 +11,7 @@ Fork of: https://github.com/raquezha/fullscreen-carousel-dialog
 ## Gradle
 ```groovy
 dependencies {
-  implementation 'com.github.PetrKrestaAi:fullscreen-carousel-dialog:1.0.0-rc3'
+  implementation 'com.github.PetrKrestaAi:fullscreen-carousel-dialog:1.0.0-rc4'
 }
 ```
 
